@@ -1,0 +1,1 @@
+Here's the code I've written for implementing Stochastic Gradient Descent (SGD) for a perceptron. You can easily adapt this code to obtain SGD for different loss functions like SVM, logistic regression, and more.
