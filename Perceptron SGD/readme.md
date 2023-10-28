@@ -9,7 +9,8 @@ Step 1: Choose a random input vector $\vec{x_i}$ and compute the predicted label
 Step 2: 
 >If the predicted label matches the true label:
 >> Do nothing.
- >Else:
+>> 
+>Else:
    >>Update the weight vector using the rule:  
            $$w \to w - \eta y_ix_i,$$
  >>where $\eta$ represents the learning rate.
