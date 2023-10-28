@@ -1,21 +1,26 @@
 **Perceptron**:
 
-A perceptron is basically a single neuron. This is modeled using a *weight matrix* `w`. Our goal is to update the matrix `w`, so that given a input vector $\vec{x}$, we want to correctly predict its label $y$.
-The algorithm we use is as follows:  
+A perceptron is essentially a single neuron, We will first dicuss the case of a binary classifier, meaning it categorizes input into one of two classes: belonging to the class or not. To do this, we model the neuron using a "weight vector" denoted as `w`. The goal is to update this vector, `w`, in such a way that when given an input vector $\vec{x}$, we can accurately predict its label $y$.
 
-Step 1: Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.   
-Step 2: If the predicted label is same as the true label:  
-         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do nothing.  
-         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:  
-          &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;update the weight by the rule  
-          $$w \to w - \eta y_ix_i,$$
-           &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where $\eta$ is the learning rate.  
-Step 3: Go back to Step 1.  
+Here's how the algorithm works:
 
-We can rewrite this update strategy succintly as follows:  
+Step 1: Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.
+
+Step 2: If the predicted label matches the true label:
+         - Do nothing.
+       Else:
+         - Update the weight vector using the rule:  
+           $$w \to w - \eta y_ix_i,$$
+         where $\eta$ represents the learning rate.
+
+Step 3: Go back to Step 1.
+
+In a more concise form, we can express this update strategy as:
 $$w \to w + \eta \mathbb{1}(y_iw^Tx_i < 0)y_ix_i$$
 
-You can easily adapt this code to obtain SGD for different loss functions like SVM, logistic regression, and more.
-For instance, if you want to use logistic regression just use the following update function:
+For multiclass classification, we make a simple change by using a "weight matrix" instead of a weight vector. Everything else in the algorithm remains largely the same.
+
+This code can be adapted for Stochastic Gradient Descent (SGD) with different loss functions, such as Support Vector Machines (SVM) or logistic regression. For example, if you want to use logistic regression, you can apply the following update function:
 $$w \to w + \eta \sigma(-y_iw^Tx_i)y_ix_i,$$
-where $\sigma$ is the sigmoid function.
+where $\sigma$ represents the sigmoid function.
+
