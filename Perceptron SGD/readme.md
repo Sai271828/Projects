@@ -22,7 +22,7 @@ while $i$ < epochs:
 
 
 In a more concise form, we can express this update strategy as:
-$$w \to w + \eta \mathbb{1}(y_iw^Tx_i < 0)y_ix_i$$
+$$w \to w + \eta \mathbb{1}(y_iw^Tx_i < 0)y_ix_i.$$
 
 For multiclass classification, we make a simple change by using a "weight matrix" instead of a weight vector. Everything else in the algorithm remains largely the same.
 
