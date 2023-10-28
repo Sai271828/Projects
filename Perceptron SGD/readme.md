@@ -7,7 +7,7 @@ Here's how the algorithm works:
 while $i$ < epochs:
 >Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.  
 >If the predicted label matches the true label:
->> Do nothing.
+>> Do nothing.  
 > Else:
    >>Update the weight vector using the rule:  
            $$w \to w - \eta y_ix_i,$$
