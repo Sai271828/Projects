@@ -5,11 +5,11 @@ The algorithm we use is as follows:
 
 Step 1: Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.   
 Step 2: If the predicted label is same as the true label:  
-          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;do nothing.  
-        else:  
-          update the weight by the rule  
+          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do nothing.  
+         &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:  
+          &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;update the weight by the rule  
           $$w \to w - \eta y_ix_i,$$
-          where $\eta$ is the learning rate.  
+           &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where $\eta$ is the learning rate.  
 Step 3: Go back to Step 1.  
 We can rewrite this update strategy succintly as follows:  
 $$w \to w + \eta \mathbb{1}(y_iw^Tx_i < 0)y_ix_i$$
