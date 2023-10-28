@@ -4,7 +4,7 @@ A perceptron is essentially a single neuron, We will first dicuss the case of a 
 
 Here's how the algorithm works:
 
-while i < epochs
+while i < epochs:
 >Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.
 
  
@@ -14,6 +14,7 @@ while i < epochs
    >>Update the weight vector using the rule:  
            $$w \to w - \eta y_ix_i,$$
  >>where $\eta$ represents the learning rate.
+>i += 1
 
 
 
