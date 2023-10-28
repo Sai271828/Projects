@@ -1,17 +1,17 @@
 **Perceptron**:
 
-A perceptron is essentially a single neuron, We will first dicuss the case of a binary classifier, meaning it categorizes input into one of two classes: belonging to the class or not. To do this, we model the neuron using a "weight vector" denoted as `w`. The goal is to update this vector, `w`, in such a way that when given an input vector $\vec{x}$, we can accurately predict its label $y$.
+A perceptron is essentially a single neuron, We will first dicuss the case of a *binary classifier*, meaning it categorizes input into one of two classes: belonging to the class or not. To do this, we model the neuron using a *weight vector* denoted as `w`. The goal is to update this vector, `w`, in such a way that when given an input vector $\vec{x}$, we can accurately predict its label $y$.
 
 Here's how the algorithm works:
 
 Step 1: Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.
 
 Step 2: If the predicted label matches the true label:
-         - Do nothing.
-       Else:
-         - Update the weight vector using the rule:  
+         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Do nothing.
+       &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Else:
+         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Update the weight vector using the rule:  
            $$w \to w - \eta y_ix_i,$$
-         where $\eta$ represents the learning rate.
+         &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where $\eta$ represents the learning rate.
 
 Step 3: Go back to Step 1.
 
