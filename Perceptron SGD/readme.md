@@ -4,18 +4,18 @@ A perceptron is essentially a single neuron, We will first dicuss the case of a 
 
 Here's how the algorithm works:
 
-Step 1: Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.
+while i < epochs
+>Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.
 
-Step 2: 
-If the predicted label matches the true label:
-> Do nothing.
-> 
-Else:
-   >Update the weight vector using the rule:  
+ 
+>If the predicted label matches the true label:
+>> Do nothing.
+> Else:
+   >>Update the weight vector using the rule:  
            $$w \to w - \eta y_ix_i,$$
- >where $\eta$ represents the learning rate.
+ >>where $\eta$ represents the learning rate.
 
-Step 3: Go back to Step 1.
+
 
 In a more concise form, we can express this update strategy as:
 $$w \to w + \eta \mathbb{1}(y_iw^Tx_i < 0)y_ix_i$$
