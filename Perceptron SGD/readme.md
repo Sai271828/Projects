@@ -11,8 +11,7 @@ while $i$ < epochs:
 > Else:
    >>Update the weight vector using the rule:  
            $$w \to w - \eta y_ix_i,$$
- >>where $\eta$ represents the learning rate.
-
+ >>where $\eta$ represents the learning rate.  
 >$i$ += $1$
 
 
