@@ -16,6 +16,6 @@ We can rewrite this update strategy succintly as follows:
 $$w \to w + \eta \mathbb{1}(y_iw^Tx_i < 0)y_ix_i$$
 
 You can easily adapt this code to obtain SGD for different loss functions like SVM, logistic regression, and more.
-For instance, if you want to use logistic regression just use the following update function.
+For instance, if you want to use logistic regression just use the following update function:
 $$w \to w + \eta \sigma(-y_iw^Tx_i)y_ix_i,$$
 where $\sigma$ is the sigmoid function.
