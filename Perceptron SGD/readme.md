@@ -5,7 +5,7 @@ The algorithm we use is as follows:
 
 Step 1: Choose a random input vector $\vec{x_i}$ and compute the predicted label $w^T\vec{x_i}$.   
 Step 2: If the predicted label is same as the true label:  
-          do nothing.  
+          &nbsp; &nbsp; do nothing.  
         else:  
           update the weight by the rule  
           $$w \to w - \eta y_ix_i,$$
