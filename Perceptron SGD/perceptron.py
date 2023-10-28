@@ -48,13 +48,10 @@ class Perceptron:
               #update weights
               if corr_class!=1:
                 #update weights but multiply by -1
-                #there may be a nice way to do this on numpy
-                #but I did not know so I just implement a loop
-                #for j in range(len(X_train[0])):
                 self.w=self.w-self.lr*X_train[a[0]]
                 
               else:
-                #for j in range(len(X_train[0])):
+                
                 self.w=self.w+self.lr*X_train[a[0]]
         #code for multiclass classifier
         if self.n_class>2:
